@@ -1,0 +1,21 @@
+{
+    "deleteCourse" : "//button[normalize-space()='Delete Courses']",
+    "addCourse" : "//button[normalize-space()='Add New Course']",
+    "chooseFile" : "//input[@id='thumbnail']",
+    "courseName" : "#name",
+    "description" : "#description",
+    "instructor" : "#instructorNameId",
+    "price" : "#price",
+    "startDate" : "[name='startDate']",
+    "currentMonth" : "//div[@class='react-datepicker__current-month']",
+    "nextMonth" : "//button[@aria-label='Next Month']",
+    "previousMonth" : "//button[@aria-label='Previous Month']",
+    "days" : "//div[@class='react-datepicker__week']/child::div",
+    "endDate" : "[name='endDate']",
+    "permanentCheckbox" : "#isPermanent",
+    "selectCategory" : "//button[@class='menu-btn']",
+    "categories" : "//div[@class='menu-items']/child::button",
+    "saveButton" : "//button[contains(text(), 'Save')]",
+    "table" : "table",
+    "rows" : "tbody tr"    
+}

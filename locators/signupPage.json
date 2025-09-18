@@ -1,0 +1,11 @@
+{
+    "nameField" : "#name",
+    "emailField" : "#email",
+    "passwordfield" : "#password",
+    "interestChecboxes" : ".interest-div label",
+    "maleGenderRadioButton" : "//input[@value='Male']",
+    "femaleGenderRadioButton" : "//input[@value='Female']",
+    "selectState" : "#state",
+    "hobbies"  : "#hobbies option",
+    "signupButton" : "button[type='submit']"
+}

@@ -1,0 +1,6 @@
+{
+    "fileUpload" : {
+        "smallerImageFile" : "testData/images/smallerImage.jpg",
+        "largerImageFile" : "testData/images/largerImage.jpg"
+    }
+}

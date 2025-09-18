@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://freelance-learn-automation.vercel.app",
+      "localStorage": [
+        {
+          "name": "jwt",
+          "value": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGM5OGNmYTNmNDllNWU3MTQyZDUyNjciLCJpYXQiOjE3NTgwNDIzOTN9.CGGtTPIql-tTp7voGGq13e0Up-WOryAiBlox2dqG-Qw\",\"user\":{\"_id\":\"68c98cfa3f49e5e7142d5267\",\"name\":\"rajesh\",\"email\":\"raja@gmail.com\",\"interests\":[\"68bec46b3f49e5e7142d0809\",\"68bec4713f49e5e7142d0813\",\"68bec46e3f49e5e7142d080e\"],\"enrolled_courses\":[],\"role\":0,\"state\":\"Telangana\",\"gender\":\"Female\",\"hobbies\":[\"Playing\"]}}"
+        }
+      ]
+    }
+  ]
+}

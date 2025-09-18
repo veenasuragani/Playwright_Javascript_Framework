@@ -1,0 +1,10 @@
+{
+    "hamburgerMenu" : "//div[@class='navbar-menu-links']/child::img",
+    "loginLink" : "//button[contains(text(), 'Log in')]",
+    "manageMenu" : "//div[@class='navbar-menu-links']",
+    "manageCourse" : "//div[@class='nav-menu-item-hover-div']/child::a[1]",
+    "manageCategory" : "//div[@class='nav-menu-item-hover-div']/child::a[2]",
+    "signOut" : "//button[@class='nav-menu-item']",
+    "courseCards" : "//div[@class='course-card row']"
+    
+}

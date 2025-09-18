@@ -1,0 +1,8 @@
+{
+    "addNewCategoryButton" : "//button[contains(text(),'Add New Category')]",
+    "table" : "table",
+    "rows" : "tbody tr",    
+    "popupWindow" : "//div[@class='modal-content']",
+    "popupMessage" : "//div[@class='modal-body']",
+    "deleteButton" : "//button[contains(text(), 'Delete')]"    
+}

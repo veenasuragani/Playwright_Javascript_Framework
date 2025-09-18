@@ -1,0 +1,7 @@
+{
+    "emailPlaceholder" : "Enter Email", 
+    "passwordPlaceholder" : "Enter Password",
+    "signinButton" : "button[type='submit']",
+    "newUserLink" : ".subLink",
+    "successMessage" : "//div[@class='Toastify__toast-body']/child::div[2]"
+}
