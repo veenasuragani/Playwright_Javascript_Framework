@@ -5,7 +5,7 @@ test.describe('@smoke Home page test', () => {
 
     test.describe.configure({mode: 'serial'});
 
-    test.only('Open application and verify the page title', async ({ homePage }) => {
+    test('Open application and verify the page title', async ({ homePage }) => {
         // const homePage = new HomePage(page);
         await homePage.openApplication();
         const title = await homePage.getPageTitle();
