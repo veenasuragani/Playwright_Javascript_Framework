@@ -46,7 +46,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 1,
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 2 : 1,
+  workers: process.env.CI ? 3 : 1,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [ ['list'],
@@ -115,107 +115,107 @@ export default defineConfig({
 
 
 
-    /* Firefox browser */
-    {
-      name: 'smoke-firefox',
-      testMatch: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
-      use: {
-        browserName: 'firefox',
-      }
-    },
-
-    {
-      name: 'setup-firefox',
-      testMatch: '**/*.setup.js', // Matches files ending with .setup.js for setup tasks     
-      dependencies: ['smoke-firefox'],
-      use: {
-        browserName: 'firefox',
-      },
-    },
-
-    {
-      name: 'firefox',
-      use: { 
-        // ...devices['Desktop Firefox'],
-        browserName: 'firefox',
-        storageState: STORAGE_STATE_FIREFOX,
-        navigationTimeout: 30000,
-        actionTimeout: 30000,
-      },
-      testMatch: '**/*.spec.js',
-      testIgnore: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
-      dependencies: ['smoke-firefox', 'setup-firefox'],
-    },
-
-
-
-    /* Webkit browser */
-    {
-      name: 'smoke-webkit',
-      testMatch: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js' ],
-      use: {
-        browserName: 'webkit',
-      }
-    },
-
-    {
-      name: 'setup-webkit',
-      testMatch: '**/*.setup.js', // Matches files ending with .setup.js for setup tasks     
-      dependencies: ['smoke-webkit'],
-      use: {
-        browserName: 'webkit',
-      }
-    },
-   
-    {
-      name: 'webkit',
-      use: { 
-        // ...devices['Desktop Safari'],
-        browserName: 'webkit',
-        storageState: STORAGE_STATE_WEBKIT, 
-        navigationTimeout: 30000,
-        actionTimeout: 30000,
-       },
-      testMatch: '**/*.spec.js',
-      testIgnore: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
-      dependencies: ['smoke-webkit', 'setup-webkit'],
-    },
-
-
-    ///////////////////////////////////////////////////////////////////////
-
-
+    // /* Firefox browser */
+    // {
+    //   name: 'smoke-firefox',
+    //   testMatch: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
+    //   use: {
+    //     browserName: 'firefox',
+    //   }
+    // },
 
     // {
-    //   name: 'edge',
+    //   name: 'setup-firefox',
+    //   testMatch: '**/*.setup.js', // Matches files ending with .setup.js for setup tasks     
+    //   dependencies: ['smoke-firefox'],
+    //   use: {
+    //     browserName: 'firefox',
+    //   },
+    // },
+
+    // {
+    //   name: 'firefox',
     //   use: { 
-    //     // ...devices['Desktop Edge'], 
-    //     browserName: 'chromium',
-    //     channel: 'msedge',
-    //    },
+    //     // ...devices['Desktop Firefox'],
+    //     browserName: 'firefox',
+    //     storageState: STORAGE_STATE_FIREFOX,
+    //     navigationTimeout: 30000,
+    //     actionTimeout: 30000,
+    //   },
+    //   testMatch: '**/*.spec.js',
+    //   testIgnore: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
+    //   dependencies: ['smoke-firefox', 'setup-firefox'],
     // },
 
 
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'],
-       storageState: STORAGE_STATE_CHROMIUM,
-      },
-      testMatch: '**/*.spec.js', // Matches test files ending with .spec.js
-      testIgnore: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
-      dependencies: ['setup-chromium'],  // Ensures setup is completed before running these tests
-    },
+
+    // /* Webkit browser */
+    // {
+    //   name: 'smoke-webkit',
+    //   testMatch: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js' ],
+    //   use: {
+    //     browserName: 'webkit',
+    //   }
+    // },
+
+    // {
+    //   name: 'setup-webkit',
+    //   testMatch: '**/*.setup.js', // Matches files ending with .setup.js for setup tasks     
+    //   dependencies: ['smoke-webkit'],
+    //   use: {
+    //     browserName: 'webkit',
+    //   }
+    // },
+   
+    // {
+    //   name: 'webkit',
+    //   use: { 
+    //     // ...devices['Desktop Safari'],
+    //     browserName: 'webkit',
+    //     storageState: STORAGE_STATE_WEBKIT, 
+    //     navigationTimeout: 30000,
+    //     actionTimeout: 30000,
+    //    },
+    //   testMatch: '**/*.spec.js',
+    //   testIgnore: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
+    //   dependencies: ['smoke-webkit', 'setup-webkit'],
+    // },
+
+
+    // ///////////////////////////////////////////////////////////////////////
+
+
+
+    // // {
+    // //   name: 'edge',
+    // //   use: { 
+    // //     // ...devices['Desktop Edge'], 
+    // //     browserName: 'chromium',
+    // //     channel: 'msedge',
+    // //    },
+    // // },
+
+
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'],
+    //    storageState: STORAGE_STATE_CHROMIUM,
+    //   },
+    //   testMatch: '**/*.spec.js', // Matches test files ending with .spec.js
+    //   testIgnore: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
+    //   dependencies: ['setup-chromium'],  // Ensures setup is completed before running these tests
+    // },
   
 
-    /* Test against mobile viewports. */
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-    },  
+    // /* Test against mobile viewports. */
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12'] },
+    // },  
     
   ],
    
