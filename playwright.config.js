@@ -86,7 +86,7 @@ export default defineConfig({
       use: {
         browserName: 'chromium',
       },
-      // testMatch: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js' ],
+       testMatch: ['**/homePageTest.spec.js', '**/signupPageTest.spec.js' ],
     },
 
     {
@@ -108,8 +108,8 @@ export default defineConfig({
         actionTimeout: 30000,         
       },      
       testMatch: '**/*.spec.js',
-      // testIgnore: ['**/loginSetup.spec.js', '**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
-      // testIgnore: /@smoke/,
+       testIgnore: ['**/loginSetup.spec.js', '**/homePageTest.spec.js', '**/signupPageTest.spec.js'],
+       testIgnore: /@smoke/,
       dependencies: ['smoke-chromium', 'setup-chromium'],
     },
 
